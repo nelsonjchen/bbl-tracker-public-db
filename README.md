@@ -4,6 +4,20 @@
 
 The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a report generated from a DuckDB database. For bandwidth cost reasons, the database cannot be directly exposed. Instead, we provide a public dataset of stock history, accessible via standard Parquet files. This data is updated every hour.
 
+## Why Use This? (Example: The "Black PETG" Bottleneck)
+
+Sometimes, simply knowing *if* an item is in stock isn't enough. You might want to know *when* multiple items are in stock together to save on shipping or validat a bulk order discount.
+
+**Real-world Scenario:**
+A user wanted to order 4 specific filaments (White PLA Matte, Black PLA Matte, Rosewood PLA, and Black PETG) using a bulk discount. They had been waiting for 7 weeks because the items were never all in stock at the same time.
+
+**The Agentic Query:**
+By analyzing the history with an AI agent, we found the bottleneck:
+> "In the period from Jan 31 to Feb 8... Black PETG is definitely the bottleneck. It seems to be a global thing... appearing for only very brief windows (less than 2 hours total in the last week)."
+
+**The Solution:**
+The analysis revealed that if the user dropped just the Black PETG from the order, the other 3 items had a **16-hour overlap window** where they could be purchased together. This kind of complex, multi-variant temporal analysis is perfect for this dataset.
+
 ## AI Assistant Usage
 
 Data analysis may not be your forte! Don't worry, we've got you covered. Use an AI assistant to generate the correct DuckDB SQL queries for your analysis.
