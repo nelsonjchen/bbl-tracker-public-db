@@ -73,7 +73,7 @@ def main():
     con.close()
     
     print("\n[Next Steps]")
-    print(f"1. Upload '{DB_FILENAME}' to ChatGPT (Code Interpreter) or Claude.")
+    print(f"1. Upload '{DB_FILENAME}' to ChatGPT (Code Interpreter).")
     print("2. Ask: 'Analyze the stock history in this file. When is Black PETG usually available?'")
 
 if __name__ == "__main__":

@@ -141,9 +141,9 @@ FROM read_parquet('https://db-public.bbltracker.com/2026-02-16-0000.parquet');
 
 ---
 
-## 🤖 Workflow: AI Analysis (ChatGPT / Claude / Gemini)
+## 🤖 Workflow: AI Analysis (ChatGPT)
 
-Want to upload the **entire dataset** to an AI for deep analysis? Use our reconstruction script to merge the stream into a single file.
+Want to upload the **entire dataset** to an AI for deep analysis? Use our reconstruction script to merge the stream into a single file for ChatGPT's Code Interpreter.
 
 1.  **Generate the DB file**:
     ```bash
@@ -153,7 +153,7 @@ Want to upload the **entire dataset** to an AI for deep analysis? Use our recons
 
 2.  **Upload to AI**:
     *   **ChatGPT**: Upload `.duckdb` -> Ask "Analyze this with Python"
-    *   **Claude/Gemini**: Upload `.duckdb` (or ask script to export CSV/Parquet if preferred).
+    *   *Note: Other AIs (Claude, Gemini) may not support DuckDB files natively yet.*
 
 3.  **Ask Questions**:
     *   *"When is the best time of day to buy Black PETG?"*
