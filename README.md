@@ -45,8 +45,8 @@ Data collection started for different regions at different times. Early records 
 | Region | Approximate Start Date | Notes |
 | :--- | :--- | :--- |
 | **US** | Jan 17, 2026 | Initial launch. |
-| **EU, UK, AU, CA** | Jan 25, 2026* | *Estimated based on available history.* |
-| **Global (Asia)** | Feb 01, 2026* | *Estimated.* |
+| **EU, UK, AU, CA** | Jan 25, 2026* | |
+| **Global (Rest of Asia not including JP or KR)** | Feb 01, 2026* | |
 
 ### 2. Stock Visibility Caps
 
@@ -66,7 +66,7 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 ### 3. Sampling Rate
 
 *   **Jan 17 - Feb 14, 2026**: ~60-minute intervals.
-*   **Feb 14, 2026 - Present**: ~30-minute intervals, aligned to the hour.
+*   **Feb 14, 2026 - Present**: ~30-minute intervals, aligned to the hour plus 5 minutes.
 
 ---
 
