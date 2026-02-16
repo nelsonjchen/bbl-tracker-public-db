@@ -120,16 +120,16 @@ You can query the data directly using DuckDB (CLI, Python, NodeJS, WASM).
 
 ### ⚡ Rapid Start (Python with `uv`)
 
-We highly recommend using [uv](https://docs.astral.sh/uv/) for a fast, zero-setup experience.
+We highly recommend using [uv](https://docs.astral.sh/uv/) for a fast, zero-setup experience. We've included a [script.py](script.py) example in this repo.
 
 1.  **Install `uv`** (if you haven't already):
     ```bash
     curl -LsSf https://astral.sh/uv/install.sh | sh
     ```
-2.  **Run directly** (no virtualenv needed):
+2.  **Run the example**:
     ```bash
-    # Run a script that uses duckdb without manually installing pip packages
-    uv run --with duckdb script.py
+    # Automatically installs duckdb/pandas and runs the query
+    uv run script.py
     ```
 
 ### SQL Example
