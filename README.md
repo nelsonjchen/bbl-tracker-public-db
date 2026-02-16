@@ -20,6 +20,34 @@ If you don't even know how to start with that, it's OK to just paste this whole 
 
 **Base URL**: `https://db-public.bbltracker.com`
 
+---
+
+## ⚠️ Data Caveats & Errata
+
+### 1. Ingestion Start Times
+
+Data collection started for different regions at different times. Early records may only contain US data.
+
+| Region | Approximate Start Date | Notes |
+| :--- | :--- | :--- |
+| **US** | Jan 17, 2026 | Initial launch. |
+| **EU, UK, AU, CA** | Jan 25, 2026* | *Estimated based on available history.* |
+| **JP, Global** | Feb 01, 2026* | *Estimated.* |
+
+### 2. Stock Visibility Caps ("The 50/400 Limit")
+
+The Bambu Lab store frontend often caps the reported stock quantity for performance or anti-scraping reasons.
+*   **Common Caps**: 50, 100, 400, 1000.
+*   **Implication**: If a row reports `stock = 50`, the *real* stock might be 50, 500, or 5000. You should treat these values as "at least X".
+*   **Max Quantity Column**: The `max_quantity` column often reflects this store-imposed limit, but it is not always populated or accurate in older data.
+
+### 3. Sampling Rate
+
+*   **Jan 17 - Feb 14, 2026**: ~30-minute intervals.
+*   **Feb 14, 2026 - Present**: ~60-minute intervals (aligned to the hour).
+
+---
+
 ## Quick Start (DuckDB)
 
 You can query the data directly using DuckDB (CLI, Python, NodeJS, WASM).
