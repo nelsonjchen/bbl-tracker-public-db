@@ -2,13 +2,19 @@
 
 *https://bbltracker.com database for DuckDB and AI Queries*
 
-The [Bambu Lab Store Filament Tracker](https://bbltracker.com) provides a public dataset of stock history, accessible via standard Parquet files. This data is updated approximately every 30 minutes.
+The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a report generated from a DuckDB database. For bandwidth cost reasons, the database cannot be directly exposed. Instead, we provide a public dataset of stock history, accessible via standard Parquet files. This data is updated every hour.
 
 ## AI Assistant Usage
 
-This documentation is designed to be machine-readable. You can paste this entire page into AI tools like **ChatGPT**, **Claude**, or **Gemini** to have them generate the correct DuckDB SQL queries for your analysis.
+Data analysis may not be your forte! Don't worry, we've got you covered. Use an AI assistant to generate the correct DuckDB SQL queries for your analysis.
 
-*Tip: Providing the Schema table below allows the AI to write precise queries for `timestamp`, `product_name`, and `stock` filtering.*
+This documentation is designed to be machine-readable. You can paste this entire page into AI tools like **ChatGPT**, **Claude**, or **Gemini** to have them generate the correct instructions and so on for your analysis.
+
+Additionally, cloning this GitHub repository down, using Cursor, Antigravity, Claude Code, Gemini-CLI, OpenAI Codex, or any other assistant or tooling will allow you to perform deep analysis on the stock data.
+
+If you don't even know how to start with that, it's OK to just paste this whole documentation into the ChatGPT, Gemini, Claude, or any other assistant or tooling to learn how to get the repository cloned onto a local machine.
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/nelsonjchen/bbl-tracker-public-db) is also a good choice for querying with citations and references but may be a bit less specific to your case.
 
 ---
 
@@ -19,7 +25,7 @@ This documentation is designed to be machine-readable. You can paste this entire
 You can query the data directly using DuckDB (CLI, Python, NodeJS, WASM).
 
 ```sql
--- Query a specific 6-hour block (e.g., Midnight - 6 AM on Feb 16, 2026)
+-- Query a specific 6-hour block (e.g., Midnight - 6 AM UTC on Feb 16, 2026) 
 SELECT * 
 FROM read_parquet('https://db-public.bbltracker.com/2026-02-16-0000.parquet');
 ```
