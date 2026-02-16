@@ -2,19 +2,23 @@
 
 *https://bbltracker.com database for DuckDB and AI Queries*
 
-The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a report generated from a DuckDB database. For bandwidth cost reasons, the database cannot be directly exposed. Instead, we provide a public dataset of stock history, accessible via standard Parquet files. This data is updated every hour.
+The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a report generated from a DuckDB database. For bandwidth cost reasons, the database cannot be directly exposed. Instead, we provide a public streaming dataset of stock history, accessible via standard Parquet files. This data is updated every hour.
 
 ## Why Use This? 
 
 *(Example: The "Black PETG" Bottleneck)*
 
-Sometimes, simply knowing *if* an item is in stock isn't enough. You might want to know *when* multiple items are in stock together to save on shipping or validat a bulk order discount.
+Sometimes, simply knowing *if* an item is in stock isn't enough. You might want to know *when* multiple items are in stock together to save on shipping or validate a bulk order discount.
 
 **Real-world Scenario:**
 A [user on Reddit](https://www.reddit.com/r/BambuLab/comments/1qya5q4/comment/o4b505q/?context=3) wanted to order 4 specific filaments (White PLA Matte, Black PLA Matte, Rosewood PLA, and Black PETG) using a bulk discount. They had been waiting for 7 weeks because the items were never all in stock at the same time.
 
 **The Agentic Query:**
-By analyzing the history with an AI agent, we found the bottleneck:
+
+By analyzing the history with an AI assistant such as Google Antigravity, we found the bottleneck:
+
+The input was literally just the user's reddit post copy-pasted into the AI assistant.
+
 > In the period from **Jan 31 to Feb 8**, there was **zero overlap** where all 4 items were in stock simultaneously. **Individual Availability (Jan 31 - Feb 8):**
 >
 > **PLA Matte White**: In stock ~24% of the time (50 hours total).
@@ -26,7 +30,10 @@ By analyzing the history with an AI agent, we found the bottleneck:
 > **PETG HF Black**: In stock **only ~0.7%** of the time (just 1.6 hours total). It seems the **Black PETG** is the main bottleneck, appearing for only very brief windows (less than 2 hours total in the last week). You might have better luck splitting your order or waiting for a larger restock event.
 
 **The Solution:**
-The analysis revealed that if the user dropped just the Black PETG from the order, the other 3 items had a **16-hour overlap window** where they could be purchased together. This kind of complex, multi-variant temporal analysis is perfect for this dataset.
+
+The analysis revealed that if the user dropped just the Black PETG from the order, the other 3 items had a **16-hour overlap window** where they could be purchased together. Black PETG can wait for another day.
+
+This kind of complex, multi-variant temporal analysis is perfect for this dataset.
 
 ## AI Assistant Usage
 
@@ -38,7 +45,7 @@ Additionally, cloning this GitHub repository down, using Cursor, Antigravity, Cl
 
 If you don't even know how to start with that, it's OK to just paste this whole documentation into the ChatGPT, Gemini, Claude, or any other assistant or tooling to learn how to get the repository cloned onto a local machine.
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/nelsonjchen/bbl-tracker-public-db) is also a good choice for querying with citations and references but may be a bit less specific to your case.
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/nelsonjchen/bbl-tracker-public-db) is also a good choice for querying with citations and references on how to use this repo but may be a bit less specific to your case. 
 
 ## Feedback & Accessibility
 
