@@ -55,7 +55,6 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
     *   `10`: Often seen during **Flash Sales** (where per-customer limits are low).
     *   `200`: Early global cap used across all regions.
     *   `400`: Standard cap for large regions (US, EU) in recent data.
-    *   `1000`: Occasionally seen in smaller regions or specific items.
 *   **Implication**: If a row reports `stock = 50`, the *real* stock might be 50, 500, or 5000. You should treat these values as "at least X".
 *   **Max Quantity Column**: The `max_quantity` column often reflects this store-imposed limit.
 
