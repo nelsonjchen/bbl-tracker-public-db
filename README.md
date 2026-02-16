@@ -39,7 +39,12 @@ Data collection started for different regions at different times. Early records 
 The Bambu Lab store frontend often caps the reported stock quantity for performance or anti-scraping reasons.
 *   **Common Caps**: 50, 100, 400, 1000.
 *   **Implication**: If a row reports `stock = 50`, the *real* stock might be 50, 500, or 5000. You should treat these values as "at least X".
-*   **Max Quantity Column**: The `max_quantity` column often reflects this store-imposed limit, but it is not always populated or accurate in older data.
+*   **Max Quantity Column**: The `max_quantity` column often reflects this store-imposed limit.
+
+**Timeline of Constraints:**
+*   **Before Feb 03, 2026**: Unlimited / Uncapped (visible stock was accurate).
+*   **Feb 03 - Feb 09, 2026**: Global cap at 200.
+*   **After Feb 09, 2026**: Variable family-based caps (typically 50, 400, or 1000).
 
 ### 3. Sampling Rate
 
