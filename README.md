@@ -92,6 +92,27 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 *   **Feb 14, 2026 - Present**: ~30-minute intervals, aligned to the hour plus 5 minutes.
 
 ---
+## FAQ & Technical Details
+
+### 1. Pricing Data
+**We do not track pricing.** This tool is strictly for tracking stock availability. If pricing is your primary concern, standard store browsing is recommended.
+
+### 2. Linking to Store Pages
+The dataset does not include direct URLs to save space. You will need to match `product_name` and `variant_name` to the store's frontend manually.
+
+**Tip:** When programmatically accessing store pages, append `?skr=yes` to the URL. This cookie/parameter tells the store to **bypass the region selection redirect**, allowing you to view stock for other regions without being forced back to your local store.
+
+### 3. Missing Rows vs. Stock 0
+*   **Stock = 0**: The item was scanned and confirmed to be **Out of Stock**.
+*   **Row Missing**: The item was not found in the scan (e.g., removed from the store listing entirely or a temporary network error).
+
+### 4. License
+This dataset is provided under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license.
+
+### 5. Hosting & Rate Limits
+This data is hosted on **Cloudflare R2**. feel free to use it within Cloudflare's own reasonable and generous download limits.
+
+---
 
 ## Quick Start (DuckDB)
 
