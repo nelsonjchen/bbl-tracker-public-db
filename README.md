@@ -13,7 +13,15 @@ A [user on Reddit](https://www.reddit.com/r/BambuLab/comments/1qya5q4/comment/o4
 
 **The Agentic Query:**
 By analyzing the history with an AI agent, we found the bottleneck:
-> "In the period from Jan 31 to Feb 8... Black PETG is definitely the bottleneck. It seems to be a global thing... appearing for only very brief windows (less than 2 hours total in the last week)."
+> In the period from **Jan 31 to Feb 8**, there was **zero overlap** where all 4 items were in stock simultaneously. **Individual Availability (Jan 31 - Feb 8):**
+>
+> **PLA Matte White**: In stock ~24% of the time (50 hours total).
+>
+> **PLA Matte Black**: In stock ~31% of the time (65 hours total).
+>
+> **PLA Wood Rosewood**: In stock ~15% of the time (32 hours total).
+>
+> **PETG HF Black**: In stock **only ~0.7%** of the time (just 1.6 hours total). It seems the **Black PETG** is the main bottleneck, appearing for only very brief windows (less than 2 hours total in the last week). You might have better luck splitting your order or waiting for a larger restock event.
 
 **The Solution:**
 The analysis revealed that if the user dropped just the Black PETG from the order, the other 3 items had a **16-hour overlap window** where they could be purchased together. This kind of complex, multi-variant temporal analysis is perfect for this dataset.
