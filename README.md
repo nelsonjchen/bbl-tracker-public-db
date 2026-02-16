@@ -123,9 +123,8 @@ You can query the data directly using DuckDB (CLI, Python, NodeJS, WASM).
 We highly recommend using [uv](https://docs.astral.sh/uv/) for a fast, zero-setup experience. We've included a [script.py](script.py) example in this repo.
 
 1.  **Install `uv`** (if you haven't already):
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    ```
+    *   *Mac/Linux*: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+    *   *Windows/Other*: See [official installation docs](https://docs.astral.sh/uv/getting-started/installation/).
 2.  **Run the example**:
     ```bash
     # Automatically installs duckdb/pandas and runs the query
