@@ -9,7 +9,7 @@ The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a re
 Sometimes, simply knowing *if* an item is in stock isn't enough. You might want to know *when* multiple items are in stock together to save on shipping or validat a bulk order discount.
 
 **Real-world Scenario:**
-A user wanted to order 4 specific filaments (White PLA Matte, Black PLA Matte, Rosewood PLA, and Black PETG) using a bulk discount. They had been waiting for 7 weeks because the items were never all in stock at the same time.
+A [user on Reddit](https://www.reddit.com/r/BambuLab/comments/1qya5q4/comment/o4b505q/?context=3) wanted to order 4 specific filaments (White PLA Matte, Black PLA Matte, Rosewood PLA, and Black PETG) using a bulk discount. They had been waiting for 7 weeks because the items were never all in stock at the same time.
 
 **The Agentic Query:**
 By analyzing the history with an AI agent, we found the bottleneck:
