@@ -61,7 +61,7 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 **Timeline of Constraints:**
 *   **Before Feb 03, 2026**: Unlimited / Uncapped (visible stock was accurate).
 *   **Feb 03 - Feb 09, 2026**: Global cap at 200.
-*   **After Feb 09, 2026**: Variable family-based caps (typically 50 or 400).
+*   **After Feb 09, 2026**: Variable family-based caps (typically 200 or 400).
 
 ### 3. Sampling Rate
 
