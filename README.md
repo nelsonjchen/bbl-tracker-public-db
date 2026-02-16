@@ -118,6 +118,22 @@ This data is hosted on **Cloudflare R2**. feel free to use it within Cloudflare'
 
 You can query the data directly using DuckDB (CLI, Python, NodeJS, WASM).
 
+### ⚡ Rapid Start (Python with `uv`)
+
+We highly recommend using [uv](https://docs.astral.sh/uv/) for a fast, zero-setup experience.
+
+1.  **Install `uv`** (if you haven't already):
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+2.  **Run directly** (no virtualenv needed):
+    ```bash
+    # Run a script that uses duckdb without manually installing pip packages
+    uv run --with duckdb script.py
+    ```
+
+### SQL Example
+
 ```sql
 -- Query a specific 6-hour block (e.g., Midnight - 6 AM UTC on Feb 16, 2026) 
 SELECT * 
