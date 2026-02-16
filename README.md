@@ -82,9 +82,9 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 *   **Max Quantity Column**: The `max_quantity` column often reflects this store-imposed limit.
 
 **Timeline of Constraints:**
-*   **Before Feb 03, 2026**: Unlimited / Uncapped (visible stock was accurate).
+*   **Before Feb 03, 2026**: Unlimited / Uncapped (visible stock was likely somewhat accurate).
 *   **Feb 03 - Feb 09, 2026**: Global cap at 200.
-*   **After Feb 09, 2026**: Variable family-based caps (typically 10, 200, or 400).
+*   **After Feb 09, 2026**: Variable family-based caps (typically 10, 200, or 400) depending on region or SKU state.
 
 ### 3. Sampling Rate
 
