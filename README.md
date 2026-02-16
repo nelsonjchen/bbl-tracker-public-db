@@ -149,7 +149,7 @@ Want to upload the **entire dataset** to an AI for deep analysis? Use our recons
     ```bash
     uv run reconstruct_db.py
     ```
-    *(Creates `bambu_stock.duckdb` in your current folder)*
+    *(Creates `bambu_stock.duckdb` with the **last 30 days** of data)*
 
 2.  **Upload to AI**:
     *   **ChatGPT**: Upload `.duckdb` -> Ask "Analyze this with Python"

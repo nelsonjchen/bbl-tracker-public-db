@@ -25,14 +25,25 @@ def main():
         print(f"Error fetching manifest: {e}")
         exit(1)
 
-    # 2. Collect URLs
+    # 2. Filter for Past 30 Days
     all_files = sorted(manifest['files'].keys())
     if not all_files:
         print("No files found in manifest.")
         exit(0)
+        
+    # Simple string comparison works for ISO dates YYYY-MM-DD
+    from datetime import datetime, timedelta, timezone
+    cutoff_date = (datetime.now(timezone.utc) - timedelta(days=30)).strftime('%Y-%m-%d')
     
-    urls = [f"https://db-public.bbltracker.com/{f}" for f in all_files]
-    print(f"Found {len(urls)} parquet shards.")
+    recent_files = [f for f in all_files if f >= cutoff_date]
+    print(f"Found {len(all_files)} total shards.")
+    print(f"Filtering for past 30 days (>= {cutoff_date})... {len(recent_files)} files selected.")
+    
+    if not recent_files:
+        print("No recent files found.")
+        exit(0)
+
+    urls = [f"https://db-public.bbltracker.com/{f}" for f in recent_files]
 
     # 3. Create DuckDB File
     if os.path.exists(DB_FILENAME):
