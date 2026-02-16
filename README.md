@@ -139,6 +139,28 @@ SELECT *
 FROM read_parquet('https://db-public.bbltracker.com/2026-02-16-0000.parquet');
 ```
 
+---
+
+## 🤖 Workflow: AI Analysis (ChatGPT / Claude / Gemini)
+
+Want to upload the **entire dataset** to an AI for deep analysis? Use our reconstruction script to merge the stream into a single file.
+
+1.  **Generate the DB file**:
+    ```bash
+    uv run reconstruct_db.py
+    ```
+    *(Creates `bambu_stock.duckdb` in your current folder)*
+
+2.  **Upload to AI**:
+    *   **ChatGPT**: Upload `.duckdb` -> Ask "Analyze this with Python"
+    *   **Claude/Gemini**: Upload `.duckdb` (or ask script to export CSV/Parquet if preferred).
+
+3.  **Ask Questions**:
+    *   *"When is the best time of day to buy Black PETG?"*
+    *   *"Graph the stock availability of PLA Matte White over the last week."*
+
+---
+
 ## Data Organization
 
 The dataset uses a simplified "Micro-Iceberg" layout optimized for low-bandwidth discovery.
