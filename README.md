@@ -1,4 +1,6 @@
-# Querying Public Stock History Data
+# Bambu Lab Store Filament Tracker Public Database
+
+*https://bbltracker.com database for DuckDB and AI Queries*
 
 The [Bambu Lab Store Filament Tracker](https://bbltracker.com) provides a public dataset of stock history, accessible via standard Parquet files. This data is updated approximately every 30 minutes.
 
