@@ -4,7 +4,9 @@
 
 The [Bambu Lab Store Filament Tracker](https://bbltracker.com) is based off a report generated from a DuckDB database. For bandwidth cost reasons, the database cannot be directly exposed. Instead, we provide a public dataset of stock history, accessible via standard Parquet files. This data is updated every hour.
 
-## Why Use This? (Example: The "Black PETG" Bottleneck)
+## Why Use This? 
+
+*(Example: The "Black PETG" Bottleneck)*
 
 Sometimes, simply knowing *if* an item is in stock isn't enough. You might want to know *when* multiple items are in stock together to save on shipping or validat a bulk order discount.
 
@@ -37,6 +39,12 @@ Additionally, cloning this GitHub repository down, using Cursor, Antigravity, Cl
 If you don't even know how to start with that, it's OK to just paste this whole documentation into the ChatGPT, Gemini, Claude, or any other assistant or tooling to learn how to get the repository cloned onto a local machine.
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/nelsonjchen/bbl-tracker-public-db) is also a good choice for querying with citations and references but may be a bit less specific to your case.
+
+## Feedback & Accessibility
+
+I understand that data analysis is technical, hard, and complicated. **My goal is to make this accessible and well-grounded for everyone.**
+
+If you have feedback, find anomalies, or have ideas on how to make this easier to use, please **report it**. Whether it's a GitHub Issue or a comment on the subreddit, your feedback is crucial to making this "open data" experiment work for the community.
 
 ---
 
