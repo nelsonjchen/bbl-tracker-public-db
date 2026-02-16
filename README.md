@@ -46,9 +46,9 @@ Data collection started for different regions at different times. Early records 
 | :--- | :--- | :--- |
 | **US** | Jan 17, 2026 | Initial launch. |
 | **EU, UK, AU, CA** | Jan 25, 2026* | *Estimated based on available history.* |
-| **JP, Global** | Feb 01, 2026* | *Estimated.* |
+| **Global (Asia)** | Feb 01, 2026* | *Estimated.* |
 
-### 2. Stock Visibility Caps ("The 50/400 Limit")
+### 2. Stock Visibility Caps
 
 The Bambu Lab store frontend often caps the reported stock quantity for performance or anti-scraping reasons.
 *   **Common Caps**:
@@ -61,12 +61,12 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 **Timeline of Constraints:**
 *   **Before Feb 03, 2026**: Unlimited / Uncapped (visible stock was accurate).
 *   **Feb 03 - Feb 09, 2026**: Global cap at 200.
-*   **After Feb 09, 2026**: Variable family-based caps (typically 200 or 400).
+*   **After Feb 09, 2026**: Variable family-based caps (typically 10, 200, or 400).
 
 ### 3. Sampling Rate
 
-*   **Jan 17 - Feb 14, 2026**: ~30-minute intervals.
-*   **Feb 14, 2026 - Present**: ~60-minute intervals (aligned to the hour).
+*   **Jan 17 - Feb 14, 2026**: ~60-minute intervals.
+*   **Feb 14, 2026 - Present**: ~30-minute intervals, aligned to the hour.
 
 ---
 
