@@ -154,6 +154,7 @@ Want to upload the **entire dataset** to an AI for deep analysis? Use our recons
 2.  **Upload to AI**:
     *   **ChatGPT**: Upload `.duckdb` -> Ask "Analyze this with Python"
     *   *Note: Other AIs (Claude, Gemini) may not support DuckDB files natively yet.*
+    *   **Example Usage**: [ChatGPT conversation showing DuckDB data analysis](https://chatgpt.com/s/t_6993eb68259081919a6233ae1655271d)
 
 3.  **Ask Questions**:
     *   *"When is the best time of day to buy Black PETG?"*
