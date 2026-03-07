@@ -86,7 +86,10 @@ The Bambu Lab store frontend often caps the reported stock quantity for performa
 *   **Feb 03 - Feb 09, 2026**: Global cap at 200.
 *   **After Feb 09, 2026**: Variable family-based caps (typically 10, 200, or 400) depending on region or SKU state.
 
-### 3. Sampling Rate
+### 3. Error Values & Anomalies
+*   `99999`: Occasionally, a store glitch may cause an item to report a stock value of `99999`. These are clearly incorrect values and should be treated as anomalous (either discarded or capped to `max_quantity`).
+
+### 4. Sampling Rate
 
 *   **Jan 17 - Feb 14, 2026**: ~60-minute intervals.
 *   **Feb 14, 2026 - Present**: ~30-minute intervals, aligned to the hour plus 5 minutes.
