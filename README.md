@@ -110,7 +110,7 @@ The dataset does not include direct URLs to save space. You will need to match `
 *   **Row Missing**: The item was not found in the scan (e.g., removed from the store listing entirely or a temporary network error).
 
 ### 4. License
-This dataset is provided under the **Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)** license.
+This dataset is provided under the **Open Data Commons Open Database License (ODbL)**.
 
 ### 5. Hosting & Rate Limits
 This data is hosted on **Cloudflare R2**. feel free to use it within Cloudflare's own reasonable and generous download limits.
